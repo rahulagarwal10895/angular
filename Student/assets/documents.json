@@ -1,0 +1,12 @@
+[
+    {
+       "name":"birthCertificate",
+       "isRequired":true
+    },
+    {
+        "name":"passPort",
+        "isRequired":false
+     }
+     
+   
+]
