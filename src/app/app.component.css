@@ -1,0 +1,25 @@
+.snack{
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    margin-left: 45%;
+    margin-right: auto;
+    background: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    
+}
+
+.text{
+color: white;
+display: inline;
+margin:20px;
+}
+
+.dismiss{
+    color:orange;
+    display: inline;
+    margin:20px;
+    cursor: pointer;
+
+}

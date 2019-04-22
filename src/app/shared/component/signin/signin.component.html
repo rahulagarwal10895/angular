@@ -1,0 +1,15 @@
+
+<div class="title">
+  Student OnBoarding App
+</div>
+<div class="signin">
+  <div class="outer">
+    <p class="signin_text">Sign In</p>
+    <input class="username" type="text"  placeholder="Username" id="username" name="username" #username [(ngModel)]="login.username">
+    <input class="password" type="password"  placeholder="Password" id="password" name="password" #password [(ngModel)]="login.password">
+    <button class="login" (click)="onLogin()">Login</button>
+    <button class="reset" (click)="onReset()">Reset</button>
+
+
+  </div>
+</div>

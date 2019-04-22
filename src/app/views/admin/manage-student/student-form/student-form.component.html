@@ -1,0 +1,213 @@
+<div class="table">
+  <form style="margin-top: 40px;" #registerForm="ngForm">
+    <div class="add">
+      Student Details:
+    </div>
+
+
+    <table>
+      <tr class="form-group">
+        <td><label class="lbl" for="usr"> Student Name:</label></td>
+        <td><input type="text" class="form-control" id="usr" [(ngModel)]="studentDetail.studentName" name="sname"
+            #sname="ngModel" required pattern="^[a-zA-Z ]*$" [readonly]="isReadOnly">
+          <div *ngIf="sname.invalid && (sname.dirty || sname.touched)" class="alert alert-danger">
+
+            <div *ngIf="sname.errors.required">
+              <i class="fa fa-exclamation-triangle"></i>Name is required.
+            </div>
+            <div *ngIf="sname.errors.pattern">
+              <i class="fa fa-exclamation-triangle"></i>Name should only contain alphabets and spaces.
+            </div>
+          </div>
+        </td>
+      </tr>
+
+
+
+      <tr class="form-group">
+        <td> <label class="lbl" for="dob">Date Of Birth:</label></td>
+        <td> <input type="date" class="form-control" id="dob" [(ngModel)]="studentDetail.dob" name="cdate"
+            #cdate="ngModel" required [readonly]="isReadOnly" />
+          <div *ngIf="cdate.invalid && (cdate.dirty || cdate.touched)" class="alert alert-danger">
+
+            <div *ngIf="cdate.errors.required">
+              <i class="fa fa-exclamation-triangle"></i> Date of Birth is required.
+            </div>
+
+
+
+          </div>
+
+
+        </td>
+      </tr>
+
+
+      <tr class="form-group">
+        <td><label class="lbl" for="usr"> Category:</label></td>
+        <!-- <td><input type="text" class="form-control" id="category" [(ngModel)]="studentDetail.category" name="category"
+              #category="ngModel" required pattern="^[a-zA-Z ]*$"> -->
+        <td>
+          <select class="form-control" id="category" [(ngModel)]="studentDetail.category" name="category"
+            #category="ngModel" required [disabled]="isReadOnly">
+            <option value="International">International</option>
+            <option value="Domestic">Domestic</option>
+
+          </select>
+          <div *ngIf="category.invalid && (category.dirty || category.touched)" class="alert alert-danger">
+
+            <div *ngIf="category.errors.required">
+              <i class="fa fa-exclamation-triangle"></i>Category is required.
+            </div>
+            <div *ngIf="category.errors.pattern">
+              <i class="fa fa-exclamation-triangle"></i>Name should only contain alphabets and spaces.
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="form-group">
+        <td><label class="lbl" for="usr"> Documents:</label></td>
+       
+        <div style="width:100%">
+          <div style="display: inline;"><label class="label">Domicile Certificate<i class="glyphicon glyphicon-asterisk
+                asterik"></i></label></div>
+          <div style="display: inline;">
+            <input class="checkbox" type="checkbox" [(ngModel)]="studentDetail.documents.domicileCertificate" value="" #dc="ngModel" name="dc" required [disabled]="isReadOnly"></div>
+        </div>
+        <div style="width:100%">
+            <div style="display: inline;"><label class="label">Previous Marksheets<i class="glyphicon glyphicon-asterisk
+                  asterik"></i></label></div>
+            <div style="display: inline;"><input class="checkbox" type="checkbox"  
+                [(ngModel)]="studentDetail.documents.previousMarksheets" value="" name="pm" required [disabled]="isReadOnly"></div>
+          </div>
+          <div style="width:100%">
+              <div style="display: inline;"><label class="label">Birth Certificate<i class="glyphicon glyphicon-asterisk
+                    asterik"></i></label></div>
+              <div style="display: inline;"><input class="checkbox" type="checkbox"  
+                  [(ngModel)]="studentDetail.documents.birthCertificate" value="" name="bc" required [disabled]="isReadOnly"></div>
+            </div>
+            <div style="width:100%">
+                <div style="display: inline;"><label class="label">Police Clearance<i *ngIf="studentDetail.category==='International'" class="glyphicon glyphicon-asterisk
+                      asterik"></i></label></div>
+                <div style="display: inline;"><input class="checkbox" type="checkbox"  
+                    [(ngModel)]="studentDetail.documents.policeClearance" value="" name="pc" [required]="studentDetail.category==='International'" [disabled]="isReadOnly"></div>
+              </div>
+              <div style="width:100%">
+                  <div style="display: inline;"><label class="label">Passport<i  class="glyphicon glyphicon-asterisk
+                        asterik"></i></label></div>
+                  <div style="display: inline;"><input class="checkbox" type="checkbox"  
+                      [(ngModel)]="studentDetail.documents.passport" value="" name="passport" required [disabled]="isReadOnly"></div>
+                </div>
+                <div style="width:100%">
+                    <div style="display: inline;"><label class="label">Signed Declaration<i class="glyphicon glyphicon-asterisk
+                          asterik"></i></label></div>
+                    <div style="display: inline;"><input class="checkbox" type="checkbox"  
+                        [(ngModel)]="studentDetail.documents.signedDeclaration" value="" name="sd" required [disabled]="isReadOnly"></div>
+                  </div>
+      </tr>
+
+
+      <tr class="form-group">
+        <td> <label class="lbl" for="contact">Contact:</label></td>
+        <td><input type="text" class="form-control" id="contact" [(ngModel)]="studentDetail.contact" name="ccontact"
+            #ccontact="ngModel" required pattern="[0-9]{10}" maxlength="10" [readonly]="isReadOnly">
+          <div *ngIf="ccontact.invalid && (ccontact.dirty || ccontact.touched)" class="alert alert-danger">
+
+            <div *ngIf="ccontact.errors.required">
+              <i class="fa fa-exclamation-triangle"></i>Contact is required.
+            </div>
+            <div *ngIf="ccontact.errors.pattern">
+              <i class="fa fa-exclamation-triangle"></i>Contact should only contain 10 digits.
+            </div>
+          </div>
+        </td>
+
+      </tr>
+      <tr class="form-group">
+        <td><label class="lbl" for="email">Email:</label></td>
+        <td> <input type="email" class="form-control" id="email" [(ngModel)]="studentDetail.email" name="cemail"
+            #cemail="ngModel" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" [readonly]="isReadOnly">
+          <div *ngIf="cemail.invalid && (cemail.dirty || cemail.touched)" class="alert alert-danger">
+
+            <div *ngIf="cemail.errors.required">
+              <i class="fa fa-exclamation-triangle"></i>Email is required.
+            </div>
+            <div *ngIf="cemail.errors.pattern">
+              <i class="fa fa-exclamation-triangle"></i>Must be a Valid Email Id
+            </div>
+
+
+          </div>
+
+        </td>
+      </tr>
+
+
+
+
+
+      <tr class="form-group">
+        <td><label class="lbl" for="fname">Father's Name:</label></td>
+        <td> <input type="text" class="form-control" id="fname" [(ngModel)]="studentDetail.fname" name="fname"
+            #fname="ngModel" required [readonly]="isReadOnly">
+          <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="alert alert-danger">
+
+            <div *ngIf="fname.errors.required">
+              <i class="fa fa-exclamation-triangle"></i>Father's Name is required.
+            </div>
+
+
+
+          </div>
+
+        </td>
+      </tr>
+
+      <tr class="form-group">
+        <td><label class="lbl" for="fname">Mother's Name:</label></td>
+        <td> <input type="text" class="form-control" id="mname" [(ngModel)]="studentDetail.mname" name="mname"
+            #mname="ngModel" required [readonly]="isReadOnly">
+          <div *ngIf="mname.invalid && (mname.dirty || mname.touched)" class="alert alert-danger">
+
+            <div *ngIf="mname.errors.required">
+              <i class="fa fa-exclamation-triangle"></i>Mother's Name is required.
+            </div>
+
+
+
+          </div>
+
+        </td>
+      </tr>
+
+      <tr class="form-group">
+        <td><label class="lbl" for="score">Score</label></td>
+        <td> <input type="text" class="form-control" id="score" [(ngModel)]="studentDetail.score" name="score"
+            #score="ngModel" required [readonly]="isReadOnly">
+          <div *ngIf="score.invalid && (score.dirty || score.touched)" class="alert alert-danger">
+
+            <div *ngIf="score.errors.required">
+              <i class="fa fa-exclamation-triangle"></i>Mother's Name is required.
+            </div>
+
+
+
+          </div>
+
+        </td>
+      </tr>
+    </table>
+
+
+
+
+    <button *ngIf="formType==='Register'" class="btn1 post" (click)="onRegister(); registerForm.reset();"
+      [disabled]="!registerForm.form.valid || exist">{{formType}}</button>
+
+    <button *ngIf="formType==='Update'" class="btn1 post" (click)="OnUpdate(); registerForm.reset();"
+      [disabled]="!registerForm.form.valid || exist">{{formType}}</button>
+
+  </form>
+
+</div>

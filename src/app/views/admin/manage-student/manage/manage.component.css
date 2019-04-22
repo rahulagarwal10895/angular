@@ -1,0 +1,247 @@
+.table{
+    margin-top: 5%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+  .table>tbody>tr>td{
+    border:none ;
+  }
+  .table>tbody>tr{
+      margin-top: 10px;
+  }
+  
+  .table>thead{
+    margin-top: 10%;
+    font-weight: 900;
+    background-color: transparent;
+    color: white;
+    border: none;
+  }
+  
+  .table>tbody>tr:nth-child(odd){
+    background-color: transparent;
+   font-family: "Book Antiqua";
+    font-weight: 100;
+    color: white;
+    margin-top: 10px;
+
+  }
+  
+  .table>tbody>tr:nth-child(even){
+    background-color: transparent;
+    font-family: "Book Antiqua";
+    font-weight: 400;
+    color: white;
+    margin-top: 10px;
+
+  }
+  
+  .plus{
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  #myInput,#email,#contact,#name {
+    /* background-image: url('./assets/images/search.png'); */
+    background-position: 10px 12px;
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 20%;
+    height:45px;
+    font-size: 14px;
+    padding: 10px 10px 12px 40px;
+    color: white;
+    margin-top: 5%;
+  
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  #email{
+    margin-left: 60px;
+  }
+  #contact{
+    margin-left: 60px;
+  }
+  #myInput{
+    margin-left: 60px;
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: white;
+  }
+
+  .category{
+      padding-top:10px;
+      margin-top: 10px !important;
+      border-radius: 4px;
+}
+.international{
+    box-shadow: 1px 1px 3px orangered;
+
+}
+
+.domestic{
+    box-shadow: 1px 1px 3px green;
+
+}
+
+   
+
+    table {
+        border-collapse: collapse;
+    }
+    
+    td {
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    tr{
+        padding-top:10px;
+        margin-top: 10px !important;
+
+    }
+
+    .ml-10{
+        margin-left: 10px;
+    }
+
+    .box{
+        border: solid white ;
+        height:300px;
+        width:550px;
+        border-radius: 4px;
+        background-color: white;
+        margin:auto;
+        margin-top: 200px;
+      }
+      
+      
+      .recharge{
+        padding: 10px;
+        background-color: black;
+      
+      }
+      .recharge>h1{
+        color:white;
+        font-family: Algerian;
+        text-align: center;
+        font-size: 25px;
+      
+      }
+
+      .delete{
+        color:black;
+        font-family: Algerian;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 50px;
+      }
+      .input{
+        margin-top: 30px;
+      }
+      .input>div{
+        display: inline-block;
+      }
+      
+      .amount{
+        color:black;
+        font-family:Algerian;
+      margin-left: 80px;}
+      
+      .form-control{
+        margin-left: 20px !important;
+        color:black !important;
+        font-weight: 700 !important;
+      }
+      
+      .btn{
+      
+        margin-left: 130px !important;
+        background-color: black !important;
+        margin-top: 50px;
+        border-color: white !important;
+        padding: 15px 20px 15px 20px;
+        font-family: Algerian;
+        display: inline;
+      
+      
+      }
+      .btn:hover{
+        background-color: #321011 !important;
+      }
+      
+      .page{
+        width:100%;
+        height:780px;
+        background-color: rgba(0,0,0,0.5);
+        position: fixed;
+        top:0;
+        left:0;
+      }
+      
+      .cross{
+        color:white;
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+      
+      .alert-danger{
+        width:100%;
+        text-align: center;
+        color:white;
+        font-weight: 500;
+      }
+      .search{
+          display:inline
+      }
+
+      #name {
+        background-image: url('../../../../../assets/images/search.png');
+        background-position: 10px 12px;
+        background-size: 10%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        width: 20%;
+        height:45px;
+        font-size: 14px;
+        padding: 10px 10px 12px 40px;
+        color: white;
+        margin-top: 5%;
+        float:right;
+      
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+      
+      select {
+        background-color: transparent;
+        background-image: url('../../../../../assets/images/search.png');
+        background-position: 10px 12px;
+        background-size: 10%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        width: 120%;
+        height:45px;
+        font-size: 14px;
+        padding: 10px 10px 12px 40px;
+        color: white;
+        margin-top: 55px;
+      
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        }
+
+        option { color: black; }
+
+  
+  
+  
+  

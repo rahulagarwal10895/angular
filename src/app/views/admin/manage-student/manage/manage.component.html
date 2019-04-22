@@ -1,0 +1,82 @@
+<div *ngIf="showManageComponent">
+  <div  class="search" id="category" style="float:left;width:15%">
+    <select (change)="onSelectCategory(category.value)" name="category" #category id="category">
+        
+      <option value="ALL">ALL</option>
+      <option value="Domestic">Domestic</option>
+      <option value="International">International</option>
+    </select>
+  </div>
+  <div class="search">
+  <input type="text" id="name" placeholder="Search By Name.." title="Type in a name" (keyup)="searchuser(name.value)"
+    #name [(ngModel)]="sname" onfocus="this.placeholder=''" onblur="this.placeholder = 'Search By Name..'">
+    </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Student Name</th>
+        <th>DOB</th>
+        <th>Email</th>
+        <th>Category</th>
+        <th>Action</th>
+
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students;let i = index" class="category" style="margin-top:10px"
+        [ngClass]="student.category==='International'?'international':'domestic'">
+        <td scope="row">{{i+1}}</td>
+        <td>{{student.studentName}}</td>
+        <td>{{student.dob}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.category}}</td>
+        <td><i class="fa fa-eye " (click)="onView(student)"></i>
+          <i class="fa fa-edit ml-10" (click)="onEdit(student)"></i>
+          <i class="fa fa-trash ml-10" (click)="onDeleteIcon(student)"></i>
+        </td>
+
+
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="showViewComponent">
+
+  <app-view [studentData]="studentData"></app-view>
+</div>
+
+<div *ngIf="showEditComponent">
+
+  <app-edit [studentData]="studentData"></app-edit>
+</div>
+
+<div *ngIf="showDeleteComponent">
+  <div class="page">
+    <form #rform="ngForm">
+      <div class="box">
+        <i class="fa fa-times cross" (click)="close()"></i>
+        <div class="recharge">
+          <h1>Are You Sure?</h1>
+        </div>
+        <p class="delete">Are You Sure You Want to Delete?</p>
+        <div>
+          <button (click)="OnDelete()" class="btn btn-primary">Yes</button>
+
+          <button (click)="close()" class="btn btn-primary">No</button>
+
+        </div>
+
+      </div>
+
+
+
+    </form>
+  </div>
+</div>

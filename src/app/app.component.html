@@ -1,0 +1,15 @@
+<div style="margin-left: 15%;margin-right: 15%">
+
+  <div *ngIf="loginService.showpanel">
+<app-commonpanel></app-commonpanel>
+</div>
+
+<router-outlet></router-outlet>
+</div>
+
+<div class="snack" *ngIf="snack.show">
+    <div class="text">{{snack.text}}</div>
+    <div class="dismiss" (click)="snack.show=false">Dismiss</div>
+    
+  </div>
+

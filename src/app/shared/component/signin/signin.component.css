@@ -1,0 +1,103 @@
+.outer{
+    width:400px;
+    height:240px;
+    background-image: url("../../../../assets/images/footer.jpg");
+    border-radius: 4px;
+        margin-left: 70px !important;
+        box-shadow: 1px 0px 8px orange;
+
+
+    
+}
+.username{
+    margin-left: 100px !important;
+    background-image: url("../../../../assets/images/back3.jpg") !important;
+    color:dimgrey !important;
+    border: 0.5px  white !important;
+    border-radius: 4px !important;
+    width:260px !important;
+    height:40px !important;
+    margin-left: 70px !important;
+    margin-top:50px !important;
+    font-family: Algerian !important;
+    vertical-align: middle;
+    padding-left: 20px;
+    box-shadow: 1px 1px 10px dimgrey;
+/*        text-shadow: -1px -2px 1px dimgrey;*/
+
+
+
+    
+    
+}
+
+.password{
+    margin-left: 100px !important;
+    background-image: url("../../../../assets/images/back3.jpg") !important;
+    color:dimgrey !important;
+    border: 0.5px  white !important;
+    border-radius: 4px !important;
+    width:260px !important;
+    height:40px !important;
+    margin-left: 70px !important;
+    margin-top:20px !important;
+    font-family: Algerian !important;
+    vertical-align: middle;
+    padding-left: 20px;
+    box-shadow: 1px 1px 10px dimgrey;
+/*        text-shadow: -1px -2px 1px dimgrey;*/
+
+
+
+    
+    
+}
+.signin_text{
+    color: white;
+    padding:10px;
+    font-family: Algerian !important;
+    margin-top:10px;
+    position: absolute;
+    left: 720px;
+}
+
+.signin{
+    margin-top:15%;
+    margin-left: 25%;
+}
+
+.reset{
+    background: white;
+    color: black;
+    padding:10px;
+    border:1px solid black;
+    box-shadow: 1px 0px 8px grey;
+    font-family: Algerian !important;
+    border-radius:4px;
+    margin-top:80px;
+    position: absolute;
+    left: 780px;
+
+}
+
+.login{
+    background: black;
+    color: white;
+    padding:10px;
+    border:1px solid black;
+    box-shadow: 1px 0px 8px orange;
+    font-family: Algerian !important;
+    border-radius:4px;
+    margin-top:80px;
+    position: absolute;
+    left: 680px;
+
+}
+
+.title{
+    font-size: 70px;
+    font-family: Algerian;
+    color: white;
+    margin-left:130px;
+    margin-top: 20px;
+}
